@@ -3,7 +3,10 @@ package com.sxt.bus.controller;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
 
+import com.sxt.bus.domain.Provider;
+import com.sxt.sys.common.Constast;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -107,5 +110,13 @@ public class CustomerController {
 			e.printStackTrace();
 			return ResultObj.DELETE_ERROR;
 		}
+	}
+
+	@RequestMapping("loadAllCustomerForSelect")
+	public DataGridView loadAllCustomerForSelect() {
+		QueryWrapper<Customer> queryWrapper=new QueryWrapper<>();
+		queryWrapper.eq("available", Constast.AVAILABLE_TRUE);
+		List<Customer> list = this.customerService.list(queryWrapper);
+		return new DataGridView(list);
 	}
 }

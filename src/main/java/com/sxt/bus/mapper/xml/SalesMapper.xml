@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sxt.bus.mapper.SalesMapper">
+
+    <!--
+        这里通常留空，因为 MyBatis-Plus 已经提供了所有基础 CRUD。
+        如果后续需要写自定义 SQL（例如销售统计、报表等），可以在此添加。
+    -->
+
+</mapper>

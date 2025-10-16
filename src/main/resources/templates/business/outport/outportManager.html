@@ -102,7 +102,7 @@ layui.use(['jquery','form','table','layer','laydate'],function(){
 			elem:'#endTime',
 			type:'datetime'
 		});
-		
+
 		//加载 数据
 		 tableIns=table.render({
 			 elem: '#outportTable'
@@ -123,7 +123,7 @@ layui.use(['jquery','form','table','layer','laydate'],function(){
 		      ,{field:'operateperson', title:'操作员',align:'center'}
 		    ] ]
 		});
-		
+
 		//加载查询条件供应商的下拉列表
 		$.get("/provider/loadAllProviderForSelect",function(res){
 				var data=res.data;
@@ -145,7 +145,7 @@ layui.use(['jquery','form','table','layer','laydate'],function(){
 				dom.html(html);
 				form.render("select");
 			});
-		
+
 		//模糊查询
 		form.on("submit(doSearch)",function(data){
 			tableIns.reload({
